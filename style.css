@@ -1,0 +1,40 @@
+body{
+background: #200122;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.content{
+    background-color: #F1F1FD;
+    width: 40%;
+    height: 60%;
+    margin-top: 10%;
+    margin-left: 30%;
+    padding: 20px;
+    border-radius: 15px;
+}
+.content h2{
+    text-align: center;
+}
+.content h1{
+    text-align: center;
+    color: #1A1363;
+    font-weight: 900;
+}
+@media screen and (max-width: 600px) {
+    .content{
+        margin-left: 5%;
+        width: 80%;
+    }
+  }
+  button{
+    background-color:#1A1363;
+    color:#F1F1FD;
+    width: 80px;
+    padding: 8px;
+    border-color: #1A1363;
+    margin-top: 20px;
+    margin-left: 20px;
+    float:;
+    border-radius: 20px;
+  }

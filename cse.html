@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bcdbd834f9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>DIU-KSC</title>
+    <style>
+        body{
+background: #200122;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.main{
+    background-color: #F1F1FD;
+    width: 40%;
+    height: 60%;
+    margin-top: 10%;
+    margin-left: 30%;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 10%;
+}
+.main h2{
+    text-align: center;
+}
+.main h1{
+    text-align: center;
+    color: #1A1363;
+    font-weight: 900;
+}
+@media screen and (max-width: 600px) {
+    .main{
+        margin-left: 10%;
+        width: 80%;
+    }
+  }
+  #search{
+    margin-left: 30%;
+    width: 40%;
+    padding: 5px;
+    border-radius: 12px;
+    border-style: solid;
+  }
+  
+  #submit:hover{
+    background-color:#6f0000;
+  }
+  table {
+  border: 1px solid #FE2937;
+  border-collapse: collapse;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 2px solid #FE2937;
+  padding: .35em;
+}
+table tr:hover{
+  background-color: #FE2937;
+  color: white;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+  font-size: 15px;
+}
+
+table th {
+  font-size: 15px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.6em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+    font-size: 15px;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+
+
+button{
+  padding: 5px;
+  border-radius: 5px;
+  background:black;
+  color: white;
+  width: 72px;
+}
+button:hover{
+  background: white;
+  color: black;
+}
+.content{
+    margin-top: 20px;
+    width: 90%;
+    margin-left: 5%;
+    height: 350px;
+  overflow: scroll;
+  margin-bottom: 30px;
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Department of Computer Science & Engineering(CSE)</h1>
+        <div class="card">
+            <h2>Enter course code:</h2>
+            <input type="search" placeholder="CSE122" name="" onkeyup="myFunction()" id="search">
+        <div class="table">
+            <div class="content">  
+          <table id="myTable">
+            <thead>
+              <tr class="header">
+                <th scope="col">Course Code</th>
+                <th scope="col">Course Name</th>
+                <th scope="col">Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="code">CSE112</td>
+                <td data-label="name">Computer Fundamentals</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">MAT111</td>
+                <td data-label="name">Basic Mathematics	</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">ENG113</td>
+                <td data-label="name">Basic Functional English and English Spoken	</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">PHY113</td>
+                <td data-label="name">Basic Physics</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">PHY114</td>
+                <td data-label="name">Basic Physics Lab</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">MAT121</td>
+                <td data-label="name">Mathematics-II</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE122</td>
+                <td data-label="name">Programming and Problem Solving	</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE123</td>
+                <td data-label="name">Problem Solving Lab	</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">ENG123</td>
+                <td data-label="name">Writing and Comprehension	</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE124</td>
+                <td data-label="name">Design for User Experience	</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">GED121</td>
+                <td data-label="name">Bangladesh Studies	</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE131</td>
+                <td data-label="name">Discrete Mathematics	</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE132</td>
+                <td data-label="name">Electrical Circuits	</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE133</td>
+                <td data-label="name">Electrical Circuits Lab</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE134</td>
+                <td data-label="name">Data Structure</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE135</td>
+                <td data-label="name">Data Structure Lab</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE136</td>
+                <td data-label="name">Software Project I</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">GED131</td>
+                <td data-label="name">Art of Living</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">MAT211</td>
+                <td data-label="name">Engineering Mathematics</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE212</td>
+                <td data-label="name">Basic Electronics</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE213</td>
+                <td data-label="name">Basic Electronics Lab</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE214</td>
+                <td data-label="name">Algorithms</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE215</td>
+                <td data-label="name">Algorithms Lab</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE216</td>
+                <td data-label="name">Software Project II	</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">ACT211</td>
+                <td data-label="name">Financial and Managerial Accounting	</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE221</td>
+                <td data-label="name">Object Oriented Programming	</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE222</td>
+                <td data-label="name">Object Oriented Programming Lab	</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">STA221</td>
+                <td data-label="name">Statistics and Probability</td>
+                <td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE223</td>
+                <td data-label="name">Digital Electronics</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE224</td>
+                <td data-label="name">Digital Electronics Lab	</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE225</td>
+                <td data-label="name">Data Communication</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE226</td>
+                <td data-label="name">Software Project III</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE231</td>
+                <td data-label="name">Microprocessor, Embedded Systems and IoT</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE232</td>
+                <td data-label="name">Microprocessor, Embedded Systems and IoT Lab</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE233</td>
+                <td data-label="name">Object Oriented Programming II</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE234</td>
+                <td data-label="name">	Object Oriented Programming II Lab</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE235</td>
+                <td data-label="name">Numerical Methods</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE236</td>
+                <td data-label="name">Math for Computer Science</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE237</td>
+                <td data-label="name">Software Project IV</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE311</td>
+                <td data-label="name">Database Management System</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE312</td>
+                <td data-label="name">Database Management System Lab</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE313</td>
+                <td data-label="name">Computer Networks</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE314</td>
+                <td data-label="name">Computer Networks Lab</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE315</td>
+                <td data-label="name">Artificial Intelligence</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE316</td>
+                <td data-label="name">Artificial Intelligence Lab</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE317</td>
+                <td data-label="name">Software Project V</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE321</td>
+                <td data-label="name">Data Mining and Machine Learning</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE322</td>
+                <td data-label="name">Data Mining and Machine Learning Lab</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE323</td>
+                <td data-label="name">Operating Systems</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE324</td>
+                <td data-label="name">Operating Systems Lab</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE325</td>
+                <td data-label="name">System Analysis and Design</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">ECO321</td>
+                <td data-label="name">Economics</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE326</td>
+                <td data-label="name">Research and Innovation in CSE</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE331</td>
+                <td data-label="name">Complier Design</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE332</td>
+                <td data-label="name">Complier Design Lab</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE333</td>
+                <td data-label="name">Software Engineering</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE334</td>
+                <td data-label="name">Pervasive Computing</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE335</td>
+                <td data-label="name">Pervasive Computing and Mobile App Development Lab</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE336</td>
+                <td data-label="name">Software Project VI</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE411</td>
+                <td data-label="name">Computer Architecture and Organization</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE412</td>
+                <td data-label="name">Big Data and IoT</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE413</td>
+                <td data-label="name">Big Data and IoT Lab</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE414</td>
+                <td data-label="name">Web Engineering</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE415</td>
+                <td data-label="name">Web Engineering Lab</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE416</td>
+                <td data-label="name">Software Project VII</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE421</td>
+                <td data-label="name">Computer Graphics</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE422</td>
+                <td data-label="name">Computer Graphics Lab</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE423</td>
+                <td data-label="name">Information Security</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+              <tr>
+                <td data-label="code">CSE498</td>
+                <td data-label="name">Social and Professional Issues in Computing</td>
+                <td data-label="link"><a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+              </tr>
+            </tbody>
+          </table>
+          
+              </div>
+        </div>
+            
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+          // Declare variables
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("search");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+        
+          // Loop through all table rows, and hide those who don't match the search query
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }
+          }
+        }
+        </script>
+</body>
+</html>

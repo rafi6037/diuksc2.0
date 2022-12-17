@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIU-KSC</title>
+    <style>
+        body{
+background: #200122;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.content{
+    background-color: #F1F1FD;
+    width: 40%;
+    height: 60%;
+    margin-top: 10%;
+    margin-left: 30%;
+    padding: 20px;
+    border-radius: 15px;
+}
+.content h2{
+    text-align: center;
+}
+.content h1{
+    text-align: center;
+    color: #1A1363;
+    font-weight: 900;
+}
+@media screen and (max-width: 600px) {
+    .content{
+        margin-left: 5%;
+        width: 80%;
+    }
+  }
+  button{
+    background-color:#1A1363;
+    color:#F1F1FD;
+    width: 80px;
+    padding: 8px;
+    border-color: #1A1363;
+    margin-top: 20px;
+    margin-left: 20px;
+    float:;
+    border-radius: 20px;
+  }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Faculty of Science and Information Technology (FSIT)</h1>
+        <div class="card">
+            <h2>Which Department?</h2>
+            <div class="radio">
+                <input type="radio" id="cse" name="faculties" value="fsit">
+                <label for="html">Department of Computer Science & Engineering(CSE)</label><br>
+                <input type="radio" id="fbe" name="faculties" value="fbe">
+                <label for="html">Department of Computing & Information System (CIS)</label><br>
+                <input type="radio" id="fe" name="faculties" value="fe">
+                <label for="html">Department of Software Engineering</label><br>
+                <input type="radio" id="fahs" name="faculties" value="fahs">
+                <label for="html">Department of Environmental Science and Disaster Management</label><br>
+                <input type="radio" id="fhss" name="faculties" value="fhss">
+                <label for="html">Department of Multimedia & Creative Technology (MCT)</label><br>
+                <input type="radio" id="fhss" name="faculties" value="fhss">
+                <label for="html">Department of General Educational Development (GED)</label><br>
+                <input type="radio" id="fhss" name="faculties" value="fhss">
+                <label for="html">Department of Information Technology and Management</label><br>
+            </div>
+            <button type="button" onclick=" checkButton()">Next</button>
+            
+        </div>
+    </div>
+
+    <script>
+        function checkButton() {  
+            if(document.getElementById('cse').checked) { 
+                    window.location.href = "cse.html"; 
+            } 
+            else if(document.getElementById('fbe').checked) { 
+                    window.location.href = "fbe.html"; 
+            }  
+            else if(document.getElementById('fe').checked) { 
+                    window.location.href = "fe.html"; 
+            }
+            else if(document.getElementById('fahs').checked) { 
+                    window.location.href = "fahs.html"; 
+            }
+            else if(document.getElementById('fhss').checked) { 
+                    window.location.href = "fhss.html"; 
+            }
+                    
+                    else { 
+                        document.getElementById("error").innerHTML 
+                            = "You have not selected any Faculty!"; 
+                    } 
+                } 
+            </script> 
+</body>
+</html>
